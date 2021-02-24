@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DOVIDO2021ModelStoreContainer" CdmEntityContainer="DovidoEntitie">
+    <EntitySetMapping Name="C_ANT_PROFORMA_BILGI">
+      <EntityTypeMapping TypeName="DOVIDO2021Model.C_ANT_PROFORMA_BILGI">
+        <MappingFragment StoreEntitySet="_ANT_PROFORMA_BILGI">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PROFORMA_NO" ColumnName="PROFORMA_NO" />
+          <ScalarProperty Name="AMBALAJ_TIPI" ColumnName="AMBALAJ_TIPI" />
+          <ScalarProperty Name="PALET_BILGI2" ColumnName="PALET_BILGI2" />
+          <ScalarProperty Name="PALET_BILGI" ColumnName="PALET_BILGI" />
+          <ScalarProperty Name="HAFTA" ColumnName="HAFTA" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_ANTE_DOVIDO_PROFORMA">
+      <EntityTypeMapping TypeName="DOVIDO2021Model.C_ANTE_DOVIDO_PROFORMA">
+        <MappingFragment StoreEntitySet="_ANTE_DOVIDO_PROFORMA">
+          <ScalarProperty Name="SIP_NO" ColumnName="SIP_NO" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="CARI_KODU" ColumnName="CARI_KODU" />
+          <ScalarProperty Name="CARI_ISIM" ColumnName="CARI_ISIM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_ANTE_PROFORMA_LIST">
+      <EntityTypeMapping TypeName="DOVIDO2021Model.C_ANTE_PROFORMA_LIST">
+        <MappingFragment StoreEntitySet="_ANTE_PROFORMA_LIST">
+          <ScalarProperty Name="PALET_BILGI2" ColumnName="PALET_BILGI2" />
+          <ScalarProperty Name="SIP_NO" ColumnName="SIP_NO" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="CARI_KODU" ColumnName="CARI_KODU" />
+          <ScalarProperty Name="CARI_ISIM" ColumnName="CARI_ISIM" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PROFORMA_NO" ColumnName="PROFORMA_NO" />
+          <ScalarProperty Name="AMBALAJ_TIPI" ColumnName="AMBALAJ_TIPI" />
+          <ScalarProperty Name="PALET_BILGI" ColumnName="PALET_BILGI" />
+          <ScalarProperty Name="HAFTA" ColumnName="HAFTA" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

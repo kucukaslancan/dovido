@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DOVIDO2021Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="_ANT_PROFORMA_BILGI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PROFORMA_NO" Type="nvarchar" MaxLength="15" />
+          <Property Name="AMBALAJ_TIPI" Type="nvarchar" MaxLength="50" />
+          <Property Name="PALET_BILGI2" Type="nvarchar" MaxLength="50" />
+          <Property Name="PALET_BILGI" Type="nvarchar" MaxLength="50" />
+          <Property Name="HAFTA" Type="int" />
+          <Property Name="ACIKLAMA" Type="nvarchar(max)" />
+          <Property Name="DURUM" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DOVIDO2021.dbo._ANTE_DOVIDO_PROFORMA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="_ANTE_DOVIDO_PROFORMA">
+          <Key>
+            <PropertyRef Name="SIP_NO" />
+            <PropertyRef Name="TARIH" />
+            <PropertyRef Name="CARI_KODU" />
+          </Key>
+          <Property Name="SIP_NO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="TARIH" Type="datetime" Nullable="false" />
+          <Property Name="CARI_KODU" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CARI_ISIM" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DOVIDO2021.dbo._ANTE_PROFORMA_LIST' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="_ANTE_PROFORMA_LIST">
+          <Key>
+            <PropertyRef Name="SIP_NO" />
+            <PropertyRef Name="TARIH" />
+            <PropertyRef Name="CARI_KODU" />
+          </Key>
+          <Property Name="SIP_NO" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="TARIH" Type="datetime" Nullable="false" />
+          <Property Name="CARI_KODU" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="CARI_ISIM" Type="nvarchar" MaxLength="4000" />
+          <Property Name="ID" Type="int" />
+          <Property Name="PROFORMA_NO" Type="nvarchar" MaxLength="15" />
+          <Property Name="AMBALAJ_TIPI" Type="nvarchar" MaxLength="50" />
+          <Property Name="PALET_BILGI2" Type="nvarchar" MaxLength="50" />
+          <Property Name="PALET_BILGI" Type="nvarchar" MaxLength="50" />
+          <Property Name="HAFTA" Type="int" />
+          <Property Name="ACIKLAMA" Type="nvarchar(max)" />
+          <Property Name="DURUM" Type="int" />
+        </EntityType>
+        <EntityContainer Name="DOVIDO2021ModelStoreContainer">
+          <EntitySet Name="_ANT_PROFORMA_BILGI" EntityType="Self._ANT_PROFORMA_BILGI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="_ANTE_DOVIDO_PROFORMA" EntityType="Self._ANTE_DOVIDO_PROFORMA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [_ANTE_DOVIDO_PROFORMA].[SIP_NO] AS [SIP_NO], 
+    [_ANTE_DOVIDO_PROFORMA].[TARIH] AS [TARIH], 
+    [_ANTE_DOVIDO_PROFORMA].[CARI_KODU] AS [CARI_KODU], 
+    [_ANTE_DOVIDO_PROFORMA].[CARI_ISIM] AS [CARI_ISIM]
+    FROM [dbo].[_ANTE_DOVIDO_PROFORMA] AS [_ANTE_DOVIDO_PROFORMA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="_ANTE_PROFORMA_LIST" EntityType="Self._ANTE_PROFORMA_LIST" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [_ANTE_PROFORMA_LIST].[SIP_NO] AS [SIP_NO], 
+    [_ANTE_PROFORMA_LIST].[TARIH] AS [TARIH], 
+    [_ANTE_PROFORMA_LIST].[CARI_KODU] AS [CARI_KODU], 
+    [_ANTE_PROFORMA_LIST].[CARI_ISIM] AS [CARI_ISIM], 
+    [_ANTE_PROFORMA_LIST].[ID] AS [ID], 
+    [_ANTE_PROFORMA_LIST].[PROFORMA_NO] AS [PROFORMA_NO], 
+    [_ANTE_PROFORMA_LIST].[AMBALAJ_TIPI] AS [AMBALAJ_TIPI], 
+    [_ANTE_PROFORMA_LIST].[PALET_BILGI2] AS [PALET_BILGI2], 
+    [_ANTE_PROFORMA_LIST].[PALET_BILGI] AS [PALET_BILGI], 
+    [_ANTE_PROFORMA_LIST].[HAFTA] AS [HAFTA], 
+    [_ANTE_PROFORMA_LIST].[ACIKLAMA] AS [ACIKLAMA], 
+    [_ANTE_PROFORMA_LIST].[DURUM] AS [DURUM]
+    FROM [dbo].[_ANTE_PROFORMA_LIST] AS [_ANTE_PROFORMA_LIST]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DOVIDO2021Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C_ANT_PROFORMA_BILGI">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PROFORMA_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="AMBALAJ_TIPI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PALET_BILGI2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PALET_BILGI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HAFTA" Type="Int32" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DURUM" Type="Int32" />
+        </EntityType>
+        <EntityType Name="C_ANTE_DOVIDO_PROFORMA">
+          <Key>
+            <PropertyRef Name="SIP_NO" />
+            <PropertyRef Name="TARIH" />
+            <PropertyRef Name="CARI_KODU" />
+          </Key>
+          <Property Name="SIP_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CARI_KODU" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CARI_ISIM" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_ANTE_PROFORMA_LIST">
+          <Key>
+            <PropertyRef Name="SIP_NO" />
+            <PropertyRef Name="TARIH" />
+            <PropertyRef Name="CARI_KODU" />
+          </Key>
+          <Property Name="SIP_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="TARIH" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CARI_KODU" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CARI_ISIM" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" />
+          <Property Name="PROFORMA_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="AMBALAJ_TIPI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PALET_BILGI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HAFTA" Type="Int32" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DURUM" Type="Int32" />
+          <Property Name="PALET_BILGI2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="DovidoEntitie" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C_ANT_PROFORMA_BILGI" EntityType="Self.C_ANT_PROFORMA_BILGI" />
+          <EntitySet Name="C_ANTE_DOVIDO_PROFORMA" EntityType="Self.C_ANTE_DOVIDO_PROFORMA" />
+          <EntitySet Name="C_ANTE_PROFORMA_LIST" EntityType="Self.C_ANTE_PROFORMA_LIST" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DOVIDO2021ModelStoreContainer" CdmEntityContainer="DovidoEntitie">
+          <EntitySetMapping Name="C_ANT_PROFORMA_BILGI">
+            <EntityTypeMapping TypeName="DOVIDO2021Model.C_ANT_PROFORMA_BILGI">
+              <MappingFragment StoreEntitySet="_ANT_PROFORMA_BILGI">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PROFORMA_NO" ColumnName="PROFORMA_NO" />
+                <ScalarProperty Name="AMBALAJ_TIPI" ColumnName="AMBALAJ_TIPI" />
+                <ScalarProperty Name="PALET_BILGI2" ColumnName="PALET_BILGI2" />
+                <ScalarProperty Name="PALET_BILGI" ColumnName="PALET_BILGI" />
+                <ScalarProperty Name="HAFTA" ColumnName="HAFTA" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_ANTE_DOVIDO_PROFORMA">
+            <EntityTypeMapping TypeName="DOVIDO2021Model.C_ANTE_DOVIDO_PROFORMA">
+              <MappingFragment StoreEntitySet="_ANTE_DOVIDO_PROFORMA">
+                <ScalarProperty Name="SIP_NO" ColumnName="SIP_NO" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="CARI_KODU" ColumnName="CARI_KODU" />
+                <ScalarProperty Name="CARI_ISIM" ColumnName="CARI_ISIM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_ANTE_PROFORMA_LIST">
+            <EntityTypeMapping TypeName="DOVIDO2021Model.C_ANTE_PROFORMA_LIST">
+              <MappingFragment StoreEntitySet="_ANTE_PROFORMA_LIST">
+                <ScalarProperty Name="PALET_BILGI2" ColumnName="PALET_BILGI2" />
+                <ScalarProperty Name="SIP_NO" ColumnName="SIP_NO" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="CARI_KODU" ColumnName="CARI_KODU" />
+                <ScalarProperty Name="CARI_ISIM" ColumnName="CARI_ISIM" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PROFORMA_NO" ColumnName="PROFORMA_NO" />
+                <ScalarProperty Name="AMBALAJ_TIPI" ColumnName="AMBALAJ_TIPI" />
+                <ScalarProperty Name="PALET_BILGI" ColumnName="PALET_BILGI" />
+                <ScalarProperty Name="HAFTA" ColumnName="HAFTA" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

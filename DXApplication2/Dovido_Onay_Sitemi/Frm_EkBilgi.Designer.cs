@@ -30,31 +30,46 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_EkBilgi));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtBicakUrl = new DevExpress.XtraEditors.TextEdit();
+            this.grpInfo = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
+            this.txtProformaNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAciklama = new DevExpress.XtraEditors.MemoEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtHafta = new System.Windows.Forms.NumericUpDown();
+            this.cmbAmbalaj = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPalet2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPalet1 = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.ID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SIP_NO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnClear = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBicakUrl.Properties)).BeginInit();
+            this.grpInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProformaNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHafta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAmbalaj.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPalet2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPalet1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -75,20 +90,7 @@
             this.groupControl1.AppearanceCaption.Options.UseFont = true;
             this.groupControl1.AppearanceCaption.Options.UseForeColor = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.groupControl1.Controls.Add(this.simpleButton2);
-            this.groupControl1.Controls.Add(this.simpleButton1);
-            this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.memoEdit1);
-            this.groupControl1.Controls.Add(this.numericUpDown1);
-            this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.textEdit3);
-            this.groupControl1.Controls.Add(this.textEdit2);
-            this.groupControl1.Controls.Add(this.labelControl3);
-            this.groupControl1.Controls.Add(this.comboBoxEdit1);
-            this.groupControl1.Controls.Add(this.labelControl2);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.txtBicakUrl);
-            this.groupControl1.Controls.Add(this.labelControl8);
+            this.groupControl1.Controls.Add(this.grpInfo);
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Location = new System.Drawing.Point(35, 35);
             this.groupControl1.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -98,157 +100,40 @@
             this.groupControl1.TabIndex = 57;
             this.groupControl1.Text = "Bıçak Resim";
             // 
-            // simpleButton2
+            // grpInfo
             // 
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(934, 93);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(91, 32);
-            this.simpleButton2.TabIndex = 97;
-            this.simpleButton2.Text = "Sil";
+            this.grpInfo.Controls.Add(this.btnClear);
+            this.grpInfo.Controls.Add(this.btnDelete);
+            this.grpInfo.Controls.Add(this.labelControl8);
+            this.grpInfo.Controls.Add(this.btnSave);
+            this.grpInfo.Controls.Add(this.txtProformaNo);
+            this.grpInfo.Controls.Add(this.labelControl5);
+            this.grpInfo.Controls.Add(this.labelControl1);
+            this.grpInfo.Controls.Add(this.txtAciklama);
+            this.grpInfo.Controls.Add(this.labelControl2);
+            this.grpInfo.Controls.Add(this.txtHafta);
+            this.grpInfo.Controls.Add(this.cmbAmbalaj);
+            this.grpInfo.Controls.Add(this.labelControl4);
+            this.grpInfo.Controls.Add(this.labelControl3);
+            this.grpInfo.Controls.Add(this.txtPalet2);
+            this.grpInfo.Controls.Add(this.txtPalet1);
+            this.grpInfo.Enabled = false;
+            this.grpInfo.Location = new System.Drawing.Point(5, 5);
+            this.grpInfo.Name = "grpInfo";
+            this.grpInfo.Size = new System.Drawing.Size(1051, 126);
+            this.grpInfo.TabIndex = 58;
+            this.grpInfo.TabStop = false;
             // 
-            // simpleButton1
+            // btnDelete
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(825, 93);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(91, 32);
-            this.simpleButton1.TabIndex = 96;
-            this.simpleButton1.Text = "Kaydet";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelControl5.Appearance.Options.UseBackColor = true;
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(265, 26);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(72, 17);
-            this.labelControl5.TabIndex = 95;
-            this.labelControl5.Text = "Ek Açıklama";
-            // 
-            // memoEdit1
-            // 
-            this.memoEdit1.EditValue = "_ANTE_DOVIDO_PROFORMA";
-            this.memoEdit1.Location = new System.Drawing.Point(265, 49);
-            this.memoEdit1.Name = "memoEdit1";
-            this.memoEdit1.Size = new System.Drawing.Size(530, 76);
-            this.memoEdit1.TabIndex = 94;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.numericUpDown1.Location = new System.Drawing.Point(179, 104);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(59, 25);
-            this.numericUpDown1.TabIndex = 93;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelControl4.Appearance.Options.UseBackColor = true;
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(165, 78);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(8, 17);
-            this.labelControl4.TabIndex = 92;
-            this.labelControl4.Text = "X";
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Enabled = false;
-            this.textEdit3.Location = new System.Drawing.Point(179, 76);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.textEdit3.Properties.Appearance.Options.UseFont = true;
-            this.textEdit3.Size = new System.Drawing.Size(59, 22);
-            this.textEdit3.TabIndex = 91;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(106, 76);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.textEdit2.Properties.Appearance.Options.UseFont = true;
-            this.textEdit2.Size = new System.Drawing.Size(53, 22);
-            this.textEdit2.TabIndex = 89;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelControl3.Appearance.Options.UseBackColor = true;
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(23, 79);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(68, 17);
-            this.labelControl3.TabIndex = 90;
-            this.labelControl3.Text = "Palet Bilgisi";
-            // 
-            // comboBoxEdit1
-            // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(106, 49);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBoxEdit1.Properties.Appearance.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBoxEdit1.Properties.AppearanceDropDown.Options.UseFont = true;
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
-            "EU",
-            "US",
-            "TR"});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(53, 24);
-            this.comboBoxEdit1.TabIndex = 88;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelControl2.Appearance.Options.UseBackColor = true;
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(23, 52);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(74, 17);
-            this.labelControl2.TabIndex = 87;
-            this.labelControl2.Text = "Ambalaj Tipi";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.labelControl1.Appearance.Options.UseBackColor = true;
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(23, 108);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(150, 17);
-            this.labelControl1.TabIndex = 85;
-            this.labelControl1.Text = "Tahmini Yükleme Haftası";
-            // 
-            // txtBicakUrl
-            // 
-            this.txtBicakUrl.EditValue = "_ANT_PROFORMA_BILGI";
-            this.txtBicakUrl.Enabled = false;
-            this.txtBicakUrl.Location = new System.Drawing.Point(106, 25);
-            this.txtBicakUrl.Name = "txtBicakUrl";
-            this.txtBicakUrl.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.txtBicakUrl.Properties.Appearance.Options.UseFont = true;
-            this.txtBicakUrl.Size = new System.Drawing.Size(153, 22);
-            this.txtBicakUrl.TabIndex = 77;
+            this.btnDelete.Enabled = false;
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
+            this.btnDelete.Location = new System.Drawing.Point(945, 84);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(91, 32);
+            this.btnDelete.TabIndex = 97;
+            this.btnDelete.Text = "Sil";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // labelControl8
             // 
@@ -258,11 +143,153 @@
             this.labelControl8.Appearance.Options.UseBackColor = true;
             this.labelControl8.Appearance.Options.UseFont = true;
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(23, 26);
+            this.labelControl8.Location = new System.Drawing.Point(34, 17);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(79, 17);
             this.labelControl8.TabIndex = 83;
             this.labelControl8.Text = "Proforma No";
+            // 
+            // btnSave
+            // 
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
+            this.btnSave.Location = new System.Drawing.Point(836, 84);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(91, 32);
+            this.btnSave.TabIndex = 96;
+            this.btnSave.Text = "Kaydet";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtProformaNo
+            // 
+            this.txtProformaNo.EditValue = "";
+            this.txtProformaNo.Enabled = false;
+            this.txtProformaNo.Location = new System.Drawing.Point(117, 16);
+            this.txtProformaNo.Name = "txtProformaNo";
+            this.txtProformaNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtProformaNo.Properties.Appearance.Options.UseFont = true;
+            this.txtProformaNo.Size = new System.Drawing.Size(153, 22);
+            this.txtProformaNo.TabIndex = 77;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.labelControl5.Appearance.Options.UseBackColor = true;
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Appearance.Options.UseForeColor = true;
+            this.labelControl5.Location = new System.Drawing.Point(276, 17);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(72, 17);
+            this.labelControl5.TabIndex = 95;
+            this.labelControl5.Text = "Ek Açıklama";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.labelControl1.Appearance.Options.UseBackColor = true;
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.Location = new System.Drawing.Point(34, 99);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(150, 17);
+            this.labelControl1.TabIndex = 85;
+            this.labelControl1.Text = "Tahmini Yükleme Haftası";
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.EditValue = "";
+            this.txtAciklama.Location = new System.Drawing.Point(276, 40);
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(530, 76);
+            this.txtAciklama.TabIndex = 94;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.labelControl2.Appearance.Options.UseBackColor = true;
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.Location = new System.Drawing.Point(34, 43);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(74, 17);
+            this.labelControl2.TabIndex = 87;
+            this.labelControl2.Text = "Ambalaj Tipi";
+            // 
+            // txtHafta
+            // 
+            this.txtHafta.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtHafta.Location = new System.Drawing.Point(190, 95);
+            this.txtHafta.Name = "txtHafta";
+            this.txtHafta.Size = new System.Drawing.Size(59, 25);
+            this.txtHafta.TabIndex = 93;
+            // 
+            // cmbAmbalaj
+            // 
+            this.cmbAmbalaj.Location = new System.Drawing.Point(117, 40);
+            this.cmbAmbalaj.Name = "cmbAmbalaj";
+            this.cmbAmbalaj.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbAmbalaj.Properties.Appearance.Options.UseFont = true;
+            this.cmbAmbalaj.Properties.AppearanceDropDown.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbAmbalaj.Properties.AppearanceDropDown.Options.UseFont = true;
+            this.cmbAmbalaj.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbAmbalaj.Properties.Items.AddRange(new object[] {
+            "EU",
+            "US",
+            "TR"});
+            this.cmbAmbalaj.Size = new System.Drawing.Size(53, 24);
+            this.cmbAmbalaj.TabIndex = 88;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.labelControl4.Appearance.Options.UseBackColor = true;
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Appearance.Options.UseForeColor = true;
+            this.labelControl4.Location = new System.Drawing.Point(176, 69);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(8, 17);
+            this.labelControl4.TabIndex = 92;
+            this.labelControl4.Text = "X";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.labelControl3.Appearance.Options.UseBackColor = true;
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Appearance.Options.UseForeColor = true;
+            this.labelControl3.Location = new System.Drawing.Point(34, 70);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(68, 17);
+            this.labelControl3.TabIndex = 90;
+            this.labelControl3.Text = "Palet Bilgisi";
+            // 
+            // txtPalet2
+            // 
+            this.txtPalet2.Location = new System.Drawing.Point(190, 67);
+            this.txtPalet2.Name = "txtPalet2";
+            this.txtPalet2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtPalet2.Properties.Appearance.Options.UseFont = true;
+            this.txtPalet2.Size = new System.Drawing.Size(59, 22);
+            this.txtPalet2.TabIndex = 91;
+            // 
+            // txtPalet1
+            // 
+            this.txtPalet1.Location = new System.Drawing.Point(117, 67);
+            this.txtPalet1.Name = "txtPalet1";
+            this.txtPalet1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.txtPalet1.Properties.Appearance.Options.UseFont = true;
+            this.txtPalet1.Size = new System.Drawing.Size(53, 22);
+            this.txtPalet1.TabIndex = 89;
             // 
             // groupControl2
             // 
@@ -297,11 +324,146 @@
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.ID,
+            this.SIP_NO,
+            this.gridColumn3,
+            this.gridColumn4,
+            this.gridColumn5,
+            this.gridColumn6,
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn1,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // ID
+            // 
+            this.ID.Caption = "ID";
+            this.ID.FieldName = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = true;
+            this.ID.VisibleIndex = 0;
+            this.ID.Width = 22;
+            // 
+            // SIP_NO
+            // 
+            this.SIP_NO.Caption = "Sipariş No";
+            this.SIP_NO.FieldName = "SIP_NO";
+            this.SIP_NO.Name = "SIP_NO";
+            this.SIP_NO.Visible = true;
+            this.SIP_NO.VisibleIndex = 1;
+            this.SIP_NO.Width = 120;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Caption = "Tarih";
+            this.gridColumn3.FieldName = "TARIH";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 88;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Caption = "Cari Kod";
+            this.gridColumn4.FieldName = "CARI_KODU";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 93;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Cari Adı";
+            this.gridColumn5.FieldName = "CARI_ISIM";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 162;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Proforma No";
+            this.gridColumn6.FieldName = "PROFORMA_NO";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 102;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Ambalaj";
+            this.gridColumn7.FieldName = "AMBALAJ_TIPI";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.Width = 79;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Palet Bil. 1";
+            this.gridColumn8.FieldName = "PALET_BILGI";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.Width = 80;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Palet Bil. 2";
+            this.gridColumn1.FieldName = "PALET_BILGI2";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 8;
+            this.gridColumn1.Width = 77;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Hafta";
+            this.gridColumn9.FieldName = "HAFTA";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 9;
+            this.gridColumn9.Width = 57;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Açıklama";
+            this.gridColumn10.FieldName = "ACIKLAMA";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 10;
+            this.gridColumn10.Width = 122;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Durum";
+            this.gridColumn11.FieldName = "DURUM";
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 11;
+            this.gridColumn11.Width = 46;
+            // 
+            // btnClear
+            // 
+            this.btnClear.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnClear.Location = new System.Drawing.Point(836, 46);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(200, 32);
+            this.btnClear.TabIndex = 98;
+            this.btnClear.Text = "Değişiklerden Vazgeç";
+            this.btnClear.Visible = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // Frm_EkBilgi
             // 
@@ -310,17 +472,19 @@
             this.ClientSize = new System.Drawing.Size(1150, 612);
             this.Controls.Add(this.groupControl1);
             this.Name = "Frm_EkBilgi";
-            this.Text = "Frm_EkBilgi";
+            this.Text = "Ek Bilgi Girişi";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Frm_EkBilgi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.memoEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBicakUrl.Properties)).EndInit();
+            this.grpInfo.ResumeLayout(false);
+            this.grpInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProformaNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAciklama.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtHafta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAmbalaj.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPalet2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPalet1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
@@ -332,22 +496,36 @@
         #endregion
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnDelete;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.MemoEdit memoEdit1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private DevExpress.XtraEditors.MemoEdit txtAciklama;
+        private System.Windows.Forms.NumericUpDown txtHafta;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtPalet2;
+        private DevExpress.XtraEditors.TextEdit txtPalet1;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbAmbalaj;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit txtBicakUrl;
+        private DevExpress.XtraEditors.TextEdit txtProformaNo;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn ID;
+        private DevExpress.XtraGrid.Columns.GridColumn SIP_NO;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private System.Windows.Forms.GroupBox grpInfo;
+        private DevExpress.XtraEditors.SimpleButton btnClear;
     }
 }

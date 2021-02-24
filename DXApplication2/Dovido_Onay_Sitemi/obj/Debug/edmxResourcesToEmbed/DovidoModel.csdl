@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DOVIDO2021Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C_ANT_PROFORMA_BILGI">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PROFORMA_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="AMBALAJ_TIPI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PALET_BILGI2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PALET_BILGI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HAFTA" Type="Int32" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DURUM" Type="Int32" />
+  </EntityType>
+  <EntityType Name="C_ANTE_DOVIDO_PROFORMA">
+    <Key>
+      <PropertyRef Name="SIP_NO" />
+      <PropertyRef Name="TARIH" />
+      <PropertyRef Name="CARI_KODU" />
+    </Key>
+    <Property Name="SIP_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TARIH" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CARI_KODU" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CARI_ISIM" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="C_ANTE_PROFORMA_LIST">
+    <Key>
+      <PropertyRef Name="SIP_NO" />
+      <PropertyRef Name="TARIH" />
+      <PropertyRef Name="CARI_KODU" />
+    </Key>
+    <Property Name="SIP_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TARIH" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CARI_KODU" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CARI_ISIM" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="Int32" />
+    <Property Name="PROFORMA_NO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="AMBALAJ_TIPI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PALET_BILGI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HAFTA" Type="Int32" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DURUM" Type="Int32" />
+    <Property Name="PALET_BILGI2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DovidoEntitie" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C_ANT_PROFORMA_BILGI" EntityType="Self.C_ANT_PROFORMA_BILGI" />
+    <EntitySet Name="C_ANTE_DOVIDO_PROFORMA" EntityType="Self.C_ANTE_DOVIDO_PROFORMA" />
+    <EntitySet Name="C_ANTE_PROFORMA_LIST" EntityType="Self.C_ANTE_PROFORMA_LIST" />
+  </EntityContainer>
+</Schema>
